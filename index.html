@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: grid;
+        grid-template-rows: auto 1fr 100px;
+        grid-template-columns: 200px 1fr;
+        grid-template-areas:
+          "nav nav"
+          "aside main"
+          "footer footer";
+        min-height: 100vh;
+      }
+      #logo {
+        width: 30px;
+        height: 30px;
+        background-color: crimson;
+      }
+      nav {
+        grid-area: nav;
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 8px;
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        justify-content: end;
+      }
+      aside {
+        grid-area: aside;
+        background-color: cadetblue;
+      }
+      main {
+        grid-area: main;
+        background-color: rgba(34, 34, 34, 0.2);
+      }
+      footer {
+        grid-area: footer;
+        background-color: rgb(136, 211, 136);
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div id="logo"></div>
+        <ul>
+          <li>O nás</li>
+          <li>Produkt</li>
+          <li>Kariéra</li>
+          <li>Kontakt</li>
+        </ul>
+      </nav>
+      <aside>Aside</aside>
+      <main>
+        <h1>Hlavní nadpis</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem expedita
+          incidunt nesciunt autem quasi ut debitis amet eum dicta qui.
+        </p>
+      </main>
+      <footer>@2026</footer>
+    </div>
+  </body>
+</html>
