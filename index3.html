@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8" />
+<style>
+  .gallery {
+    display: grid;
+    display: grid-lanes;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+  .card {
+    background: hsl(var(--h) 60% 75%);
+    border-radius: 8px;
+    font: 600 1.5rem system-ui;
+    display: grid;
+    place-items: center;
+  }
+  .wide {
+    grid-column: span 2;
+  }
+</style>
+<p id="info"></p>
+<div class="gallery" id="g"></div>
+<script>
+  info.textContent = CSS.supports("display", "grid-lanes")
+    ? "✅ grid-lanes podporováno"
+    : "❌ grid-lanes nepodporováno (fallback na grid)";
+  for (let i = 1; i <= 30; i++) {
+    const d = document.createElement("div");
+    d.className = "card" + (i % 7 === 0 ? " wide" : "");
+    d.style.height = 80 + Math.random() * 220 + "px";
+    d.style.setProperty("--h", (i * 37) % 360);
+    d.textContent = i;
+    g.appendChild(d);
+  }
+</script>

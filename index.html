@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
       * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
+      body {
+        font-family: inter;
+      }
+
       .container {
         display: grid;
         grid-template-rows: auto 1fr 100px;
@@ -59,7 +65,15 @@
       <nav>
         <div id="logo"></div>
         <ul>
-          <li>O nás</li>
+          <li
+            style="
+              color: rgb(255, 255, 255);
+              background-color: rgb(255, 0, 0);
+              padding: 3px;
+            "
+          >
+            O nás
+          </li>
           <li>Produkt</li>
           <li>Kariéra</li>
           <li>Kontakt</li>
@@ -67,7 +81,7 @@
       </nav>
       <aside>Aside</aside>
       <main>
-        <h1>Hlavní nadpis</h1>
+        <h1>Hlavní nadpis 1</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem expedita
           incidunt nesciunt autem quasi ut debitis amet eum dicta qui.
@@ -80,8 +94,23 @@
           perspiciatis! Consequuntur nihil amet eaque. Libero, numquam! Ea
           provident vero minus reprehenderit, tempora in libero!
         </p>
+        <div
+          style="
+            width: 300px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          "
+        >
+          Lorem ipsum, dolor
+          <span style="background-color: yellow">sit</span> amet consectetur
+          adipisicing elit. Autem tempore aliquid atque iure, incidunt quasi
+          totam non veniam architecto deleniti!
+
+          <button>Koupit</button>
+        </div>
       </main>
-      <footer>@2026</footer>
+      <footer>@2026 Václav</footer>
     </div>
   </body>
 </html>
